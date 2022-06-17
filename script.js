@@ -40,3 +40,39 @@ console.log(true)
 function past(h, m, s){
     return (h*60*60*1000) + (m*60*1000) + (s*1000)
 }
+
+console.log(past(0,1,1));
+
+//string to array
+
+function stringToArray(string){
+    return string.split(' ')
+}
+
+console.log(stringToArray("I love arrays they are my favorite"))
+
+//count points
+
+
+function points(games) {
+    let sum = 0;
+    let newArr = [];
+    games.forEach(item => newArr.push(item.split(':')));
+    newArr.forEach(item => {
+        if (item[0] > item[1]) {
+            sum += 3
+        } if (item[0] == item[1]) {
+            sum +=1
+        }
+    })
+
+    return sum
+    
+    // return games.reduce((acc, item) => {
+    //     const arr = item.split(':');
+    //     const sum = arr[0] > arr[1] ? 3 : 1;
+    //     return acc + sum
+    // },0)
+}
+
+console.log(points(['1:0','2:0','3:0','4:0','2:3','3:4','4:1','3:2','4:2','4:3']))
