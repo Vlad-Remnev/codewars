@@ -27,4 +27,10 @@ console.log(areYouPlayingBanjo('Adam'))
 console.log(areYouPlayingBanjo('Ringo'))
 
 
+//true/false to str
 
+function booleanToString(b){
+    return b.toString()
+}
+
+console.log(true)
