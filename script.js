@@ -76,3 +76,30 @@ function points(games) {
 }
 
 console.log(points(['1:0','2:0','3:0','4:0','2:3','3:4','4:1','3:2','4:2','4:3']))
+
+//countBy
+
+function countBy(x, n) {
+    let z = [];
+    for (let i = x; i <= n*x; i+=x) {
+        z.push(i)
+    }
+    return z;
+}
+
+console.log(countBy(3 , 6))
+
+//betterThanAverage
+
+function betterThanAverage(classPoints, yourPoints) {
+    let sum = classPoints.reduce((acc, item) => {
+        return acc + item / classPoints.length 
+    }, 0);
+    if (sum < yourPoints) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
