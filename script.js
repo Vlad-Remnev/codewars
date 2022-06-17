@@ -103,3 +103,34 @@ function betterThanAverage(classPoints, yourPoints) {
 }
 
 console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
+
+//count cards
+
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count--;
+            break;
+    
+    }
+    
+    let holdBet = 'Hold'
+    
+    if (count < 0) {
+        return count + holdBet
+    } else {
+        holdBet = 'Bet'
+        return count + holdBet
+    }
+}
