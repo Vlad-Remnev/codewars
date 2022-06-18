@@ -255,3 +255,9 @@ function digitize(n) {
 }
 
 console.log(digitize(35231))
+
+function invert(array) {
+    return array.map(item => -item)
+}
+
+console.log(invert([1,2,3,4,5]))
