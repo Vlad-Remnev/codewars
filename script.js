@@ -145,3 +145,9 @@ function sum(arr, n) {
     }
   }
 console.log(sum([2, 3, 4], 1))
+
+//math min/max random
+
+function randomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  }
