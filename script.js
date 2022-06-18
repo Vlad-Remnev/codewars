@@ -247,3 +247,11 @@ function reverseWords(str) {
 }
 
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+
+
+function digitize(n) {
+    let newArr = JSON.stringify(n).split('').reverse();
+    return newArr.map(item => +item)
+}
+
+console.log(digitize(35231))
