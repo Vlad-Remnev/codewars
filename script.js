@@ -159,3 +159,15 @@ function checkSign(num) {
   }
   
   checkSign(10);
+
+//recursion (fill array with min & max given)
+
+function rangeOfNumbers(startNum, endNum) {
+    if (endNum - startNum === 0) {
+      return [startNum];
+    } else {
+      var numbers = rangeOfNumbers(startNum, endNum - 1);
+      numbers.push(endNum);
+      return numbers;
+    }
+  }
