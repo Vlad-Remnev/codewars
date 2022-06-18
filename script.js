@@ -151,3 +151,11 @@ console.log(sum([2, 3, 4], 1))
 function randomRange(myMin, myMax) {
     return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
   }
+
+//multi ternary
+
+function checkSign(num) {
+    return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero'
+  }
+  
+  checkSign(10);
