@@ -240,3 +240,10 @@ function oddOrEven(array) {
 
 
 console.log(oddOrEven([0]))
+
+function reverseWords(str) {
+    let newArr = str.split(' ').map(item => item.split('').reverse().join(''));
+    return newArr.join(' ')
+}
+
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
