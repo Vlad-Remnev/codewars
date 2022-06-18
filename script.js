@@ -171,3 +171,53 @@ function rangeOfNumbers(startNum, endNum) {
       return numbers;
     }
   }
+
+//remove fisrt/last letter
+
+function removeChar(str){
+    return str.slice(1, -1)
+};
+
+console.log(removeChar('eloquent'))
+
+//array of nums
+
+function sumMix(x){
+    // let sum = 0
+    // x.map(item => sum+= +item)
+    // return sum
+    return x.reduce(function (prev, item) {
+        return prev + +item
+    }, 0)
+}
+
+console.log(sumMix([0, 1, 2, 3]))
+
+//upper string
+
+function upperStr(str) {
+    let newArr = str.split(' ')
+    return newArr.map(item => item.charAt(0).toUpperCase() + item.slice(1))
+}
+
+console.log(upperStr("How can mirrors be real if our eyes aren't real"))
+
+//middle of the word
+
+function getMiddle(s) {
+    let pos 
+    let length
+
+    if (s.length % 2 == 1) {
+        pos = s.length / 2;
+        length = 1
+    } else {
+        pos = s.length / 2 - 1
+        length = 2
+    }
+
+    return s.substring(pos, pos + length)
+}
+
+console.log(getMiddle("testing"))
+console.log(getMiddle("test"))
