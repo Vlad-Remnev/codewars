@@ -229,3 +229,14 @@ function noSpace(x){
 }
 
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+//odd/even func
+
+function oddOrEven(array) {
+    let sum = 0
+    array.forEach(item => sum+= item)
+    return sum % 2 == 0 ? "odd" : "even"
+ }
+
+
+console.log(oddOrEven([0]))
