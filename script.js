@@ -261,3 +261,104 @@ function invert(array) {
 }
 
 console.log(invert([1,2,3,4,5]))
+
+function sumTwoSmallestNumbers(numbers) {  
+    const newArr = numbers.sort((a, b) => b - a)
+    return newArr[newArr.length - 1] + newArr[newArr.length - 2]
+}
+
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))
+
+function basicOp(operation, value1, value2)
+{
+  switch(operation) {
+    case '+':
+        return value1 + value2;
+    case '-':
+        return value1 - value2;
+    case '*':
+        return value1 * value2;
+    case '/':
+        return value1 / value2;
+  }
+}
+
+console.log(basicOp('+', 4, 7))
+
+function repeatStr (n, s) {
+    let sum = ''
+    for (let i =0; i < n; i++) {
+        sum += s
+    }
+    return sum;
+  }
+
+  console.log(repeatStr(3, "*"))
+
+  function boolToWord( bool ){
+    return bool ? 'Yes' : 'No'
+  }
+
+  console.log(boolToWord(true))
+
+  function getSum( a,b )
+  {
+    let result = 0;
+     const start = a < b ? a : b;
+     const end = a > b ? a : b;
+     for (let i = start; i <= end; i++) {
+        result += i
+     }
+     return result
+  }
+
+  console.log(getSum(0,-1))
+
+  function hero(bullets, dragons){
+    return bullets / dragons >= 2 ? true: false 
+    }
+
+    console.log(hero(11, 5))
+
+function solution(str, ending){
+    let res = true;
+    // for (let i = str.length - 1; i > str.length - ending.length - 1; i--) {
+    //     if (ending[i] === str[i])
+    // }
+    for (let i = 1; i <= ending.length; i++) {
+        if (!(ending[ending.length - i] === str[str.length - i])) {
+            res = false
+        }
+    }
+    return res
+}
+    
+console.log(solution('sumo', 'omo'))
+
+function lovefunc(flower1, flower2){
+    if ((flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower2 % 2 === 0 && flower1 % 2 !== 0)) {
+        return true
+    }
+    return false
+  }
+
+  console.log(lovefunc(1,4))
+
+  function smash (words) {
+    const result = ''
+    words.forEach(item => result += `${item} `)
+    return result.trim()
+ };
+
+ function removeSmallest(numbers) {
+    if(numbers.length){
+        let newArr = [...numbers];
+        let newRes = [...numbers];
+        newArr.sort((a, b) => b-a);
+        newRes.splice(newRes.indexOf(newArr[newArr.length - 1]), 1)
+        return newRes
+    }
+    return numbers
+  }
+
+  console.log(removeSmallest([5, 3, 2, 1, 4, 1]))
