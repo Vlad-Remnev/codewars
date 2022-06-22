@@ -315,7 +315,7 @@ function repeatStr (n, s) {
   console.log(getSum(0,-1))
 
   function hero(bullets, dragons){
-    return bullets / dragons >= 2 ? true: false 
+    return bullets / dragons >= 2 ? true: false
     }
 
     console.log(hero(11, 5))
@@ -336,16 +336,14 @@ function solution(str, ending){
 console.log(solution('sumo', 'omo'))
 
 function lovefunc(flower1, flower2){
-    if ((flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower2 % 2 === 0 && flower1 % 2 !== 0)) {
-        return true
-    }
-    return false
+    return (flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower2 % 2 === 0 && flower1 % 2 !== 0);
+
   }
 
   console.log(lovefunc(1,4))
 
   function smash (words) {
-    const result = ''
+    let result = ''
     words.forEach(item => result += `${item} `)
     return result.trim()
  };
@@ -362,3 +360,117 @@ function lovefunc(flower1, flower2){
   }
 
   console.log(removeSmallest([5, 3, 2, 1, 4, 1]))
+
+function greet (name, owner) {
+    return name === owner ? 'Hello boss' : 'Hello guest';
+}
+
+console.log(greet('Daniel', 'Danie'))
+
+function litres(time) {
+     return Math.floor(time / 2);
+}
+
+console.log(litres(12.3))
+
+function even_or_odd(number) {
+    return number % 2 === 0 ? 'Even' : 'Odd'
+}
+
+console.log(even_or_odd(2))
+
+function sum (numbers) {
+    let sum = 0;
+    numbers.map(item => sum+= item)
+    return sum
+}
+
+console.log(sum([1, 5.2, 4, 0, -1]))
+
+function descendingOrder(n){
+    return +n.toString().split('').sort((a, b) => b - a).join('')
+}
+
+console.log(descendingOrder(1021))
+
+function countSheeps(arrayOfSheep) {
+    let newArr = arrayOfSheep.filter(item => item)
+    return newArr.length
+}
+
+console.log(countSheeps([true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true ]))
+
+function findNeedle(haystack) {
+    let haystackPosition = haystack.indexOf('needle') + 1
+    return `found the needle at position ${haystackPosition}`
+}
+
+console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]))
+
+var min = function(list){
+    let min = list.sort((a, b) => b - a)
+    return min[min.length - 1];
+}
+
+var max = function(list){
+    let max = list.sort((a, b) => b - a)
+    return max[0];
+}
+
+console.log(min([-52, 56, 30, 29, -54, 0, -110]))
+console.log(max([-52, 56, 30, 29, -54, 0, -110]))
+
+function check(a, x) {
+    return a.includes(x)
+}
+
+console.log(check([66, 101], 66))
+
+var countSheep = function (num){
+    let str = ''
+    for (let i = 1; i <= num; i++) {
+        str += `${i} sheep...`
+    }
+    return str
+}
+
+console.log(countSheep(3))
+
+function alphabetPosition(text) {
+     let alphabet = {
+         a: 1,
+         b: 2,
+         c: 3,
+         d: 4,
+         e: 5,
+         f: 6,
+         g: 7,
+         h: 8,
+         i: 9,
+         j: 10,
+         k: 11,
+         l: 12,
+         m: 13,
+         n: 14,
+         o: 15,
+         p: 16,
+         q: 17,
+         r: 18,
+         s: 19,
+         t: 20,
+         u: 21,
+         v: 22,
+         w: 23,
+         x: 24,
+         y: 25,
+         z: 26
+     }
+    return text.toLowerCase().split('').map((item) => alphabet[item]).filter((item) => item).join(' ')
+}
+
+console.log(alphabetPosition("The narwhal bacons at midnight."))
