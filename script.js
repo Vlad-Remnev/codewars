@@ -474,3 +474,4 @@ function alphabetPosition(text) {
 }
 
 console.log(alphabetPosition("The narwhal bacons at midnight."))
+
