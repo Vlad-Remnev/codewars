@@ -495,3 +495,23 @@ function findShort(s){
 }
 
 console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+
+function squareSum(numbers){
+    return numbers.reduce((acc, item) => acc + Math.pow(item, 2))
+}
+
+console.log(squareSum([1,2]))
+
+function rentalCarCost(d) {
+    let cost = 40;
+    if (d < 3) {
+        return cost * d
+    } else if (d < 7) {
+        return (cost * d) - 20
+    } else {
+        return (cost * d) - 50
+    }
+}
+
+console.log(rentalCarCost(1))
+console.log(rentalCarCost(8))
