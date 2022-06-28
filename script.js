@@ -488,3 +488,10 @@ var number = function (busStops) {
 }
 
 console.log(number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]))
+
+function findShort(s){
+    let res = s.split(' ').reduce((a, b) => a.length <= b.length ? a : b)
+    return res.length
+}
+
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
