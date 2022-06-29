@@ -27,7 +27,7 @@ console.log(areYouPlayingBanjo('Adam'))
 console.log(areYouPlayingBanjo('Ringo'))
 
 
-//true/false to str
+true/false to str
 
 function booleanToString(b) {
     return b.toString()
@@ -536,3 +536,32 @@ function search (arr, key) {
 }
 
 console.log(search([1, 6, 3, 4, 5, 2, 7, 8, 10, 9], 8))
+
+// isDivideBy
+
+function isDivideBy(number, a, b) {
+    return number % a === 0 && number % b === 0 ? true : false
+}
+
+console.log(isDivideBy(-12, 2, -6))
+console.log(isDivideBy(-12, 2, -5))
+
+// duplicateCount
+
+function duplicateCount(text){
+    let newArr = text.toLowerCase().split('');
+    let countTimes = {};
+    let result = 0
+    newArr.forEach((el) => {
+        debugger
+        countTimes = {...countTimes, [el]: countTimes[el] ? countTimes[el] = 1 : '0' }
+
+        console.log('el', countTimes)
+    })
+    for (let item in countTimes) {
+        result += +countTimes[item]
+    }
+    return result
+}
+
+console.log(duplicateCount("abbcdeAa"))
