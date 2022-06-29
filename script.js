@@ -515,3 +515,24 @@ function rentalCarCost(d) {
 
 console.log(rentalCarCost(1))
 console.log(rentalCarCost(8))
+
+//binary search
+
+function search (arr, key) {
+    const sortedArr = arr.sort((a, b) => a - b)
+    let start = 0;
+    let end = sortedArr.length - 1;
+    while(start <= end) {
+        let middle = Math.floor((start + end) / 2);
+        if (sortedArr[middle] === key) {
+            return middle
+        } else if (sortedArr[middle] < key) {
+            start = middle + 1
+        } else {
+            end = middle - 1
+        }
+    }
+    return -1
+}
+
+console.log(search([1, 6, 3, 4, 5, 2, 7, 8, 10, 9], 8))
