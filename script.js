@@ -27,7 +27,7 @@ console.log(areYouPlayingBanjo('Adam'))
 console.log(areYouPlayingBanjo('Ringo'))
 
 
-true/false to str
+// true/false to str
 
 function booleanToString(b) {
     return b.toString()
@@ -565,3 +565,50 @@ function duplicateCount(text){
 }
 
 console.log(duplicateCount("abbcdeAa"))
+
+function isValidWalk(walk) {
+    if (walk.length === 10) {
+        let north, south, west, east = 0
+        walk.forEach(item => {
+            if (item === 'n') {
+                north += 1
+            } else if (item === 's') {
+                south += 1
+            } else if (item === 'w') {
+                west += 1
+            } else {
+                east += 1
+            }
+        })
+        if (north === south && west === east) {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        return false
+    }
+}
+
+console.log(isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']))
+
+function doubleChar(str) {
+    return str.split('').map(item => item + item).join('')
+}
+
+console.log(doubleChar("abcd"))
+
+function expandedForm(num) {
+    num = num.toString()
+    const arrDigits = []
+    let multi = 1
+    for (let i = 1; i <= num.length; i++) {
+        const digit = num[num.length - i]
+        digit > 0 && arrDigits.unshift(digit * multi)
+        multi *= 10
+    }
+    return arrDigits.join(' + ')
+}
+
+console.log(expandedForm(12))
+console.log(expandedForm(70304))
